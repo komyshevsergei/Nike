@@ -1,0 +1,78 @@
+.home {
+  padding: 258px 0 368px;
+  background:black url("../images/home.background.png") center/cover no-repeat;
+  &__block{
+    background: url("../images/Background Text.png") left bottom/contain no-repeat;
+    display: flex;
+    column-gap: 94px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 0.16em;
+    color: #FFFFFF;
+  }
+  &__info{
+    width: 492px;
+  }
+  &__img{
+    position: relative;
+    max-width: 50%;
+    &-rotate{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__details{
+    margin: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    align-items: center;
+  }
+  &__btn{
+    font-size: 12px;
+    padding: 6px 16px;
+    border: 1px solid #FFFFFF;
+    border-radius: 36px;
+    background: transparent;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  &__price{
+    font-size: 36px;
+    color: pink;
+  }
+  &__details-right{
+    display: flex;
+    align-items: center;
+    column-gap: 45px;
+  }
+  &__size{
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  &__size-select{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    & option{
+      text-align: center;
+      color: #000;
+      font-size: 28px;
+      line-height: 33px;
+    }
+  }
+}
