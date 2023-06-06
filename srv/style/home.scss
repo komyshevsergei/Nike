@@ -1,5 +1,6 @@
 .home {
-  padding: 258px 0 368px;
+  position: relative;
+  padding: 258px 0 0;
   background:black url("../images/home.background.png") center/cover no-repeat;
   &__block{
     background: url("../images/Background Text.png") left bottom/contain no-repeat;
@@ -7,6 +8,14 @@
     column-gap: 94px;
     align-items: center;
     justify-content: center;
+    &-color {
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      & circle {
+        cursor: pointer;
+      }
+    }
   }
   &__title {
     font-style: italic;
@@ -24,8 +33,10 @@
     max-width: 50%;
     &-rotate{
       position: absolute;
-      left: 0;
-      bottom: 0;
+      left: 50%;
+      bottom: -65px;
+      transform: translateX(-45%);
+      cursor: grab;
     }
   }
   &__details{
@@ -74,5 +85,44 @@
       font-size: 28px;
       line-height: 33px;
     }
+  }
+
+  &__swiper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 128px;
+  }
+
+  &__row{
+    width: 940px;
+  }
+  &__card{
+    border: 2px solid #FFFFFF;
+    padding: 134px 0 61px 32px;
+    position: relative;
+  }
+  &__card-img{
+    position: absolute;
+    left: 15px;
+    bottom: 101px;
+    width: 210px;
+  }
+  &__card-title{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  &__arrows{
+    display: flex;
+    align-items: center;
+    column-gap: 44px;
+  }
+  &__arrow{
+    display: flex;
+    color: #FFFFFF;
+    font-size: 16px;
+    column-gap: 20px;
+    align-items: center;
+    cursor: pointer;
   }
 }

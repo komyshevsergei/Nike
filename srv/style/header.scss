@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
   &__nav{
     display: flex;
     justify-content: space-between;
@@ -27,6 +28,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     position: relative;
+    transition: 0.5s;
     &::before{
       content: '';
       position: absolute;
