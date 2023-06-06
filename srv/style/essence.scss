@@ -3,13 +3,12 @@
   position: relative;
   &__flash{
     padding: 20px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: absolute;
     left: -3px;
     top: -10;
+    height: 80px!important;
     width: calc(100% + 10px);
+    z-index: 100;
     &_red{
       background: #BA0000;
       transform: rotate(-1.91deg);
@@ -25,5 +24,64 @@
     font-size: 32px;
     letter-spacing: 1em;
     color: #FFFFFF;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    text-align: center;
+  }
+  &__title{
+    position: relative;
+    padding: 220px 0 115px;
+    font-size: 64px;
+    line-height: 100px;
+    color: #FFFFFF;
+    max-width: 611px;
+    & img{
+      width: 72px;
+      height: 72px;
+    }
+    &::before{
+      position: absolute;
+      top: 330px;
+      right: 14px;
+      content: '';
+      width: 288px;
+      height: 55px;
+      background: #BA0000;
+      mix-blend-mode: multiply;
+      transform: rotate(11.2deg);
+    }
+  }
+  &__description{
+    font-size: 16px;
+    line-height: 48px;
+    color: #FFFFFF;
+    max-width: 1064px;
+  }
+  &__btn{
+    position: relative;
+    font-size: 16px;
+    padding: 16px 25px;
+    border: 1px solid #FFFFFF;
+    border-radius: 36px;
+    background: transparent;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    ::before{
+      content: '';
+      position: absolute;
+      left: -589px;;
+      bottom: -363px;;
+      width: 496px;
+      height: 720px;
+      background: url("../images/red-boot.png")center/cover no-repeat;
+      z-index: -1;
+    }
   }
 }

@@ -31,6 +31,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 .header__nav {
   display: flex;
@@ -55,6 +56,7 @@ img {
   text-transform: uppercase;
   color: #FFFFFF;
   position: relative;
+  transition: 0.5s;
 }
 .header__link::before {
   content: "";
@@ -72,7 +74,8 @@ img {
 }
 
 .home {
-  padding: 258px 0 368px;
+  position: relative;
+  padding: 258px 0 0;
   background: black url("../images/home.background.png") center/cover no-repeat;
 }
 .home__block {
@@ -81,6 +84,14 @@ img {
   column-gap: 94px;
   align-items: center;
   justify-content: center;
+}
+.home__block-color {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.home__block-color circle {
+  cursor: pointer;
 }
 .home__title {
   font-style: italic;
@@ -99,8 +110,10 @@ img {
 }
 .home__img-rotate {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 50%;
+  bottom: -65px;
+  transform: translateX(-45%);
+  cursor: grab;
 }
 .home__details {
   margin: 32px 0;
@@ -149,6 +162,43 @@ img {
   font-size: 28px;
   line-height: 33px;
 }
+.home__swiper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 128px;
+}
+.home__row {
+  width: 940px;
+}
+.home__card {
+  border: 2px solid #FFFFFF;
+  padding: 134px 0 61px 32px;
+  position: relative;
+}
+.home__card-img {
+  position: absolute;
+  left: 15px;
+  bottom: 101px;
+  width: 210px;
+}
+.home__card-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.home__arrows {
+  display: flex;
+  align-items: center;
+  column-gap: 44px;
+}
+.home__arrow {
+  display: flex;
+  color: #FFFFFF;
+  font-size: 16px;
+  column-gap: 20px;
+  align-items: center;
+  cursor: pointer;
+}
 
 .essence {
   height: 500px;
@@ -156,13 +206,12 @@ img {
 }
 .essence__flash {
   padding: 20px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: absolute;
   left: -3px;
   top: -10;
+  height: 80px !important;
   width: calc(100% + 10px);
+  z-index: 100;
 }
 .essence__flash_red {
   background: #BA0000;
@@ -178,6 +227,194 @@ img {
   font-size: 32px;
   letter-spacing: 1em;
   color: #FFFFFF;
+}
+.essence__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  text-align: center;
+}
+.essence__title {
+  position: relative;
+  padding: 220px 0 115px;
+  font-size: 64px;
+  line-height: 100px;
+  color: #FFFFFF;
+  max-width: 611px;
+}
+.essence__title img {
+  width: 72px;
+  height: 72px;
+}
+.essence__title::before {
+  position: absolute;
+  top: 330px;
+  right: 14px;
+  content: "";
+  width: 288px;
+  height: 55px;
+  background: #BA0000;
+  mix-blend-mode: multiply;
+  transform: rotate(11.2deg);
+}
+.essence__description {
+  font-size: 16px;
+  line-height: 48px;
+  color: #FFFFFF;
+  max-width: 1064px;
+}
+.essence__btn {
+  position: relative;
+  font-size: 16px;
+  padding: 16px 25px;
+  border: 1px solid #FFFFFF;
+  border-radius: 36px;
+  background: transparent;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.essence__btn ::before {
+  content: "";
+  position: absolute;
+  left: -589px;
+  bottom: -363px;
+  width: 496px;
+  height: 720px;
+  background: url("../images/red-boot.png") center/cover no-repeat;
+  z-index: -1;
+}
+
+.bestsellers {
+  padding: 732px 0 86px;
+}
+.bestsellers__title {
+  width: fit-content;
+  position: relative;
+  font-size: 64px;
+  margin: 0 auto 107px;
+  color: #FFFFFF;
+}
+.bestsellers__title::before {
+  content: "";
+  position: absolute;
+  right: -46px;
+  top: 3px;
+  width: 287px;
+  height: 55px;
+  background: #BA0000;
+  mix-blend-mode: multiply;
+  transform: rotate(11.2deg);
+}
+.bestsellers__row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.bestsellers__picture {
+  position: relative;
+  width: calc(33.3333333333% - 10.7px);
+}
+.bestsellers__picture-title {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #FFFFFF;
+}
+
+.sports-time {
+  padding: 86px 0 80px;
+}
+.sports-time__title {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.sports-time__title::before {
+  content: "";
+  position: absolute;
+  mix-blend-mode: multiply;
+  left: 0;
+  top: 30px;
+  width: 237px;
+  height: 78px;
+  background: url("../images/sports-time/title-before.png") center/cover no-repeat;
+  z-index: 2;
+}
+.sports-time__title span {
+  font-family: "Futura XBlkCnIt BT";
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  font-style: italic;
+  font-size: 96px;
+  line-height: 115px;
+  text-transform: capitalize;
+  transform: rotate(-10.67deg);
+}
+.sports-time__title span:first-child {
+  left: 46px;
+  color: #FFFFFF;
+  z-index: 1;
+}
+.sports-time__title span:last-child {
+  right: 46px;
+  top: 20px;
+  -webkit-text-stroke: 1px #FFFFFF;
+}
+.sports-time__grid {
+  margin: 120px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 47px;
+}
+.sports-time__card {
+  position: relative;
+  text-align: center;
+}
+.sports-time__card-product {
+  max-width: 300px;
+}
+.sports-time__card-desk {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  z-index: -1;
+}
+.sports-time__card-title {
+  margin-top: 45px;
+  font-family: "Futura LtCn BT";
+  font-style: normal;
+  font-size: 24px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.sports-time__card:nth-child(3) {
+  grid-column: 2/3;
+}
+.sports-time__btn {
+  position: relative;
+  font-size: 16px;
+  padding: 16px 25px;
+  border: 1px solid #FFFFFF;
+  border-radius: 36px;
+  background: transparent;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {

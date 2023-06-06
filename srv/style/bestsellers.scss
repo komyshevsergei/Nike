@@ -1,0 +1,42 @@
+.bestsellers{
+  padding: 732px 0 86px;
+  &__title{
+    width: fit-content;
+    position: relative;
+    font-size: 64px;
+    margin: 0 auto 107px;
+    color: #FFFFFF;
+    &::before{
+      content: "";
+      position: absolute;
+      right: -46px;
+      top: 3px;
+      width: 287px;
+      height: 55px;
+      background: #BA0000;
+      mix-blend-mode: multiply;
+      transform: rotate(11.2deg);
+    }
+  }
+  &__row{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__picture{
+    position: relative;
+    width: calc((100% / 3) - 10.7px);
+    &-title{
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 64px;
+      text-align: center;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #FFFFFF;
+    }
+  }
+}
