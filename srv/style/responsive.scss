@@ -34,6 +34,48 @@
 }
 
 @media (max-width: 768px) {
+  .header__left {
+    column-gap: 9px;;
+  }
+  .header__right {
+    column-gap: 21px;
+  }
+  .header__logo {
+    width: 46px;
+  }
+  .header__link{
+    font-size: 12px;
+  }
+  .home__arrows {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    flex-wrap: wrap;
+  }
+  .home__card-title{
+    font-size: 12px;
+  }
+  .home__card-img img {
+    width: 63%;
+  }
+  .home__title {
+    font-size: 28px;
+  }
+  .bestsellers__picture-title{
+    font-size: 28px;
+  }
+  .essence__flash{
+    height: 49px !important;
+  }
+  .essence__flash-text{
+    font-size: 12px;
+  }
+  .sports-time__title span{
+    font-size: 60px;
+  }
+  .sports-time__card-title{
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 676px) {
